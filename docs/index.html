@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ufuk Keskin's portfolio for MIT 16.S893: AI for Engineering Research, quantum information theory, and quantum sequential decision-making.">
+  <title>Ufuk Keskin | About Me</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="index.html">Ufuk Keskin</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">About Me</a></li>
+          <li><a href="project.html">My Project</a></li>
+          <li><a href="sofar.html">So Far</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Leaves are a separate decorative layer; the original artwork is untouched. -->
+  <figure class="campus-banner">
+    <input class="breeze-toggle" type="checkbox" id="pause-breeze">
+    <div class="campus-scene">
+      <a href="assets/stata-center.svg" aria-label="View the full-size Stata Center illustration">
+        <img src="assets/stata-center.svg" width="6144" height="2304" fetchpriority="high"
+          alt="Illustrated interpretation of MIT's Stata Center: tilted brick and silver façades above a blue Hockfield Court, with students, trees, and the red steel forms of Aesop's Fables, II.">
+      </a>
+      <svg class="campus-breeze" viewBox="0 0 2560 960" width="2560" height="960" aria-hidden="true" focusable="false">
+        <defs>
+          <g id="breeze-leaf-shape" stroke="#182332" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M-15 1Q-8-12 14-6Q11 10-3 9Q-11 9-15 1Z" fill="currentColor" stroke-width="1.2"/>
+            <path d="M-20 5Q-5 0 9-3M-5 0L-6-5M1-1L5 4" fill="none" stroke-width=".85"/>
+          </g>
+        </defs>
+        <g transform="translate(175 240)">
+          <g class="breeze-leaf breeze-leaf--one"><g class="leaf-turn"><use href="#breeze-leaf-shape"/></g></g>
+        </g>
+        <g transform="translate(370 300)">
+          <g class="breeze-leaf breeze-leaf--two"><g class="leaf-turn"><use href="#breeze-leaf-shape"/></g></g>
+        </g>
+        <g transform="translate(265 545)">
+          <g class="breeze-leaf breeze-leaf--three"><g class="leaf-turn"><use href="#breeze-leaf-shape"/></g></g>
+        </g>
+        <g transform="translate(2070 540)">
+          <g class="breeze-leaf breeze-leaf--four"><g class="leaf-turn"><use href="#breeze-leaf-shape"/></g></g>
+        </g>
+        <g transform="translate(2280 495)">
+          <g class="breeze-leaf breeze-leaf--five"><g class="leaf-turn"><use href="#breeze-leaf-shape"/></g></g>
+        </g>
+      </svg>
+    </div>
+    <label class="breeze-control" for="pause-breeze">Pause breeze</label>
+  </figure>
+
+  <main id="main" class="container home-main">
+    <div class="home-columns">
+      <div>
+        <section aria-labelledby="about-heading">
+          <h1 id="about-heading">About Me</h1>
+          <p>
+            Hi, I'm Ufuk Keskin. In this portfolio, I share my progress on using
+            large language models to advance my research in quantum information theory.
+          </p>
+          <p>
+            This website is part of <strong>16.S893 — AI for Engineering Research</strong>
+            at <a href="https://www.mit.edu/">MIT</a>.
+          </p>
+          <!-- Add your background, education, and other personal details here. -->
+          <p>
+            <a href="mailto:ufukkesk@mit.edu">ufukkesk@mit.edu</a><br>
+            <a href="https://github.com/hilarlia">GitHub: hilarlia</a>
+          </p>
+        </section>
+        <section aria-labelledby="project-heading">
+          <h2 id="project-heading">My Project</h2>
+          <p>
+            Theoretical and algorithmic analysis of quantum sequential decision-making:
+            understanding complexity bounds and developing algorithms with optimal complexity.
+          </p>
+          <p><a href="project.html">Project overview and current work →</a></p>
+        </section>
+      </div>
+      <div>
+        <section aria-labelledby="interests-heading">
+          <h2 id="interests-heading">Research interests</h2>
+          <p>
+            Quantum information theory, quantum algorithms, sequential decision-making,
+            and the complexity of approximately optimal decisions. In this course,
+            I am exploring how LLMs can support this research.
+          </p>
+        </section>
+        <section aria-labelledby="notebook-heading">
+          <h2 id="notebook-heading">The portfolio notebook</h2>
+          <ul class="link-list">
+            <li><a href="project.html">My Project.</a> The research question, objectives, and latest work.</li>
+            <li><a href="sofar.html">So Far.</a> A running record of the steps along the way.</li>
+            <li><a href="blog.html">Blog.</a> A space for informal thoughts, research-related or otherwise.</li>
+          </ul>
+          <p class="muted">A place to keep the work and the thinking behind it together.</p>
+        </section>
+      </div>
+    </div>
+
+    <nav class="section-links" aria-label="Explore the portfolio">
+      <a class="section-link" href="project.html">
+        <img src="assets/research.svg" alt="" width="300" height="250" loading="lazy">
+        <h2>My Project</h2>
+        <p>Questions, methods, and current work</p>
+      </a>
+      <a class="section-link" href="sofar.html">
+        <img src="assets/notebook.svg" alt="" width="300" height="250" loading="lazy">
+        <h2>So Far</h2>
+        <p>The process, one step at a time</p>
+      </a>
+      <a class="section-link" href="blog.html">
+        <img src="assets/coffee.svg" alt="" width="300" height="250" loading="lazy">
+        <h2>Blog</h2>
+        <p>Notes from in and outside the notebook</p>
+      </a>
+    </nav>
+    <p class="artwork-note">
+      Stata Center &amp; Hockfield Court · Illustrated interpretation ·
+      <a href="assets/stata-center.svg">Full-size artwork</a> / <a href="assets/stata-center-6k.png" download>6K PNG</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <span>16.S893 · AI for Engineering Research</span>
+        <a href="mailto:ufukkesk@mit.edu">Email</a>
+        <a href="https://github.com/hilarlia">GitHub</a>
+      </div>
+      <p>© 2026 Ufuk Keskin</p>
+    </div>
+  </footer>
+</body>
+</html>

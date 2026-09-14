@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 300 250" role="img" aria-labelledby="title desc">
+<title id="title">The research notebook</title><desc id="desc">A blue notebook, a pencil and a trail of steps.</desc>
+<g transform="" stroke-linejoin="round" stroke-linecap="round">
+<path d="M39 222Q119 195 257 213L252 228 48 235Z" fill="#ebedf5" stroke="none" stroke-width="1.8" />
+<polygon points="60,53 180,35 220,204 99,226" fill="#2449ae" stroke="#182332" stroke-width="1.8" />
+<polygon points="71,53 179,39 217,199 108,218" fill="#c4d2eb" stroke="#182332" stroke-width="1.8" />
+<polygon points="81,44 188,29 222,191 109,210" fill="#ffe4b8" stroke="#182332" stroke-width="1.8" />
+<path d="M104 73l74 -12" fill="none" stroke="#8d9abb" stroke-width="1.5" />
+<path d="M104 93l74 -12" fill="none" stroke="#8d9abb" stroke-width="1.5" />
+<path d="M104 113l74 -12" fill="none" stroke="#8d9abb" stroke-width="1.5" />
+<path d="M104 133l74 -12" fill="none" stroke="#8d9abb" stroke-width="1.5" />
+<path d="M104 153l74 -12" fill="none" stroke="#8d9abb" stroke-width="1.5" />
+<path d="M104 173l74 -12" fill="none" stroke="#8d9abb" stroke-width="1.5" />
+<path d="M76 63q-14 -3 -12 5q0 10 16 5" fill="none" stroke="#182332" stroke-width="2" />
+<path d="M76 85q-14 -3 -12 5q0 10 16 5" fill="none" stroke="#182332" stroke-width="2" />
+<path d="M76 107q-14 -3 -12 5q0 10 16 5" fill="none" stroke="#182332" stroke-width="2" />
+<path d="M76 129q-14 -3 -12 5q0 10 16 5" fill="none" stroke="#182332" stroke-width="2" />
+<path d="M76 151q-14 -3 -12 5q0 10 16 5" fill="none" stroke="#182332" stroke-width="2" />
+<path d="M76 173q-14 -3 -12 5q0 10 16 5" fill="none" stroke="#182332" stroke-width="2" />
+<polygon points="224,53 234,55 204,178 192,194 192,175" fill="#ff8b20" stroke="#182332" stroke-width="1.8" />
+<polygon points="192,175 204,178 192,194" fill="#ffe4b8" stroke="#182332" stroke-width="1.8" />
+<path d="M192 189L192 194 197 189 M229 56L199 176" fill="none" stroke="#182332" stroke-width="1" />
+<path d="M37 85Q12 115 42 155 M241 145Q281 133 269 92" fill="none" stroke="#182332" stroke-width="1.5" stroke-dasharray="3 6"/>
+<circle cx="38" cy="77" r="7" fill="#ff8b20" stroke="#182332" stroke-width="1.5"/>
+<circle cx="268" cy="86" r="7" fill="#5978c3" stroke="#182332" stroke-width="1.5"/>
+</g>
+</svg>
