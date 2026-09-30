@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 300 250" role="img" aria-labelledby="title desc">
+<title id="title">Quantum research</title><desc id="desc">An ink-drawn quantum sphere, a decision graph and a notebook.</desc>
+<g transform="" stroke-linejoin="round" stroke-linecap="round">
+<path d="M28 211Q152 186 268 215L232 227 58 228Z" fill="#ebedf5" stroke="none" stroke-width="1.8" />
+<polygon points="37,175 133,149 234,183 143,218" fill="#ffe4b8" stroke="#182332" stroke-width="1.8" />
+<path d="M143 218V226L37 184V175 M143 226L234 192V183" fill="#f0ba77" stroke="#182332" stroke-width="1.8" />
+<path d="M134 155L143 210 M59 177L105 166 M73 187L112 176 M164 172L208 187" fill="none" stroke="#182332" stroke-width="1.3" />
+<circle cx="183" cy="86" r="57" fill="#91a8dd" stroke="#182332" stroke-width="1.5"/>
+<ellipse cx="183" cy="86" rx="57" ry="19" fill="none" stroke="#182332" stroke-width="1.5"/>
+<ellipse cx="183" cy="86" rx="23" ry="57" fill="none" stroke="#182332" stroke-width="1.5"/>
+<path d="M183 22V149 M119 86H247 M183 86L210 46" fill="none" stroke="#182332" stroke-width="1.4" />
+<circle cx="210" cy="46" r="6" fill="#ff8b20" stroke="#182332" stroke-width="1.5"/>
+<path d="M42 60H89V116H48 M89 60L105 41" fill="none" stroke="#182332" stroke-width="1.5" />
+<circle cx="42" cy="60" r="9" fill="#2449ae" stroke="#182332" stroke-width="1.5"/>
+<circle cx="89" cy="60" r="9" fill="#ff8b20" stroke="#182332" stroke-width="1.5"/>
+<circle cx="89" cy="116" r="9" fill="#ffe4b8" stroke="#182332" stroke-width="1.5"/>
+<circle cx="48" cy="116" r="9" fill="#5978c3" stroke="#182332" stroke-width="1.5"/>
+<circle cx="105" cy="41" r="9" fill="#ffe4b8" stroke="#182332" stroke-width="1.5"/>
+</g>
+</svg>

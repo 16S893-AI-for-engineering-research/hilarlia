@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Quantum Chameleon Problem: Decision-Making for Quantum
+Systems in Sequential Tasks"></meta>
+  <title>Ufuk Keskin | Lightning Talk</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="index.html">Ufuk Keskin</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">About Me</a></li>
+          <li><a href="project.html">My Project</a></li>
+          <li><a href="sofar.html">So Far</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="deck-main">
+    <div class="deck-container">
+      <header class="deck-header">
+        <h1>The Quantum Chameleon Problem: Decision-Making for Quantum
+Systems in Sequential Tasks</h1>
+        <p class="lead">Lightning Talk</p>
+        <p><a href="project.html">← Back to My Project</a></p>
+      </header>
+
+      <article class="deck-prose talk-block">
+        <h2>Problem statement</h2>
+        <p>
+          In practical applications utilizing quantum systems, the same system at hand
+may need to be reused for several tasks. However, reinitializing the quantum state can be costly, to
+the point where a discrete set of control operations is preferable. Because each quantum operation,
+including measurement, can change the state and yield probabilistic outcomes, an action that
+maximizes the utility of the quantum state for one task may reduce its utility for later tasks, and
+the controller may need to plan the actions for each possible outcome. This motivates the research
+that will be followed in the 16.S897 course, which will be referred to as the quantum chameleon
+problem: <b>how should a controller decide on its actions to maximize performance across a sequence
+of tasks with less computational complexity?</b>
+        </p>
+        <figure class="visual-figure deck-figure">
+          <img src="./assets/figure-problem-statement_v3.svg" width="2984" height="853" alt="">
+          <figcaption><b>Figure 1.</b> In some cases, the quantum state may need to be reused for sequential tasks, and reinitialization can be costly. In order to utilize the same quantum state for many tasks, a discrete set of (cheaper) control operations can be applied before employing it for a certain task.</figcaption>
+        </figure>
+        <h2>Why this matters, and why it is hard</h2>
+        <p>
+          Quantum sensors and processors need fast, reliable control as their tasks
+change. On the other hand, a preliminary investigation shows that the number of possible actions
+grows doubly exponentially with the number of tasks, demonstrating that deciding actions through
+brute-force search is computationally challenging. Therefore, the investigation should be extended to
+include decision-making policies providing theoretical guarantees on their proximity to the optimal
+policies that decide on the optimal sequence of actions.
+        </p>
+        
+        <h2>The Quantum Chameleon Problem</h2>
+        <p>
+          A Chameleon adapts to the color of the environment to increase its chance of survival. This is similar to the quantum system in our problem setting, where the system must be transformed to fit the specifics of the tasks it is intended to perform.
+        </p>
+        <figure class="visual-figure deck-figure">
+          <img src="./assets/figure1-chameleon-astra.svg" width="1400" height="650" alt="Three detailed habitat panels connected by flat arrows. A small line-drawn chameleon changes from green in a leafy understory, to ochre in dry scrub, to blue in cool forest shade.">
+          <figcaption><b>Figure 2.</b> A Chameleon adapts to the color of the environment to increase its chance of survival.</figcaption>
+        </figure>
+
+        <h2>The problem setting of Quantum Chameleon Problem</h2>
+        <p>
+          At each stage, the controller decides an action to perform on the quantum state to prepare it for future tasks. Actions performed by the controller, as well as the task that the state has been through, 
+          induce a change on the quantum state in a probabilistic manner. Rewards quantify how well the quantum state adapts to a specific task, and the aim is to maximize the cumulative reward across all tasks.
+        </p>
+        <figure class="visual-figure deck-figure">
+          <img src="./assets/figure2-qchameleon-tool.png" width="5968" height="1706" alt="">
+          <figcaption><b>Figure 3.</b> A detailed setting of the quantum chameleon problem, where the controller decides actions on a quantum state that induce a probabilistic change in the state. The aim is to maximize the cumulative reward obtained over all the stages.</figcaption>
+        </figure>
+
+        <h2>Core research question</h2>
+        <p>
+          The manuscript developed throughout the semester will include the
+mathematical formulation of the problem and decision-making policies in the context of quantum
+systems, as well as the development of approximately optimal policies. In order to develop such
+policies, the following question needs to be answered: <b>What is the quantity that captures the
+effective dimensionality of the problem such that it suffices for the controller to decide on the actions
+by searching over this effective dimension to achieve an approximately optimal policy?</b>
+          
+Formulation and characterization of this quantity will pave the way for quantifying the fundamental
+bounds on the computational complexity of approximately-optimal policies, as well as development
+of such policies.
+        </p>
+        <figure class="visual-figure deck-figure">
+          <img src="./assets/figure3-effective-dimension-astra.svg" width="1440" height="740" alt="">
+          <figcaption><b>Figure 4.</b> If the problem's effective dimensionality is small, this can be exploited to design near-optimal policies with lower computational complexity.</figcaption>
+        </figure>
+
+
+        <h2>What I expect the agent to do.</h2>
+        <ul>
+          <li>Consistency checks for the mathematical claims</li>
+          <li>Derivation and formalization of proofs</li>
+          <li>Finding relevant examples and testing the results via numerical simulations</li>
+          <li>Producing high-quality image that conforms to the house-style standards of the research group</li>
+        </ul>
+
+        </p>
+        <figure class="visual-figure deck-figure">
+          <img src="./assets/figure4-agent-network_v2.svg" width="1440" height="740" alt="">
+          <figcaption><b>Figure 5.</b> Planned agent workflow.</figcaption>
+        </figure>
+      </article>
+
+      
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <span>16.S893 · AI for Engineering Research</span>
+        <a href="mailto:ufukkesk@mit.edu">Email</a>
+        <a href="https://github.com/hilarlia">GitHub</a>
+      </div>
+      <p>© 2026 Ufuk Keskin</p>
+    </div>
+  </footer>
+</body>
+</html>
