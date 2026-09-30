@@ -1,0 +1,51 @@
+PASS BBPSSW.trace_bell: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.bell_hermitian: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.bell_idempotent: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.bell_positive: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.positive_real_smul: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.positive_add: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.mixture_positive: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.mixture_real_smul: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.trace_mixture: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.werner_density: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.fidelity_mixture: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.fidelity_werner: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.success_polynomial: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.success_positive: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.success_at_most_one: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.success_gt_five_ninths: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.update_sub: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.update_improves: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.update_lt_one: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.update_one: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.update_half: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.example_three_quarters: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.xor4_local: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.xor4_involutive: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.bxor_eq_conjugation: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.bxor_unitary: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.accepted_werner: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.accepted_branches_equal: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.accepted_trace: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.accepted_fidelity: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.conditional_fidelity: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.cycleU_unitary: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.cyclePair_matrix: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.cyclePair_unitary: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.cycle_mixture: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.cycle_bell: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.twirl_mixture: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.cycle_smul: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.twirl_smul: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.round_output: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.round_density: [propext, Quot.sound, Classical.choice]
+PASS BBPSSW.bbpssw_correct: [propext, Quot.sound, Classical.choice]
+BBPSSW AUDIT PASSED: all listed theorems use only standard Lean axioms.
+BBPSSW.bbpssw_correct {F : ℝ} (hlo : 1 / 2 < F) (hhi : F < 1) :
+  BBPSSW.IsDensity (BBPSSW.werner F) ∧
+    Matrix.trace (BBPSSW.accepted (BBPSSW.werner F) (BBPSSW.werner F)) = ↑(BBPSSW.successProbability F) ∧
+      5 / 9 < BBPSSW.successProbability F ∧
+        BBPSSW.successProbability F ≤ 1 ∧
+          BBPSSW.roundOutput F = BBPSSW.werner (BBPSSW.update F) ∧
+            BBPSSW.IsDensity (BBPSSW.roundOutput F) ∧
+              BBPSSW.fidelity (BBPSSW.roundOutput F) = ↑(BBPSSW.update F) ∧ F < BBPSSW.update F ∧ BBPSSW.update F < 1
