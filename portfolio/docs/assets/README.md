@@ -1,5 +1,9 @@
 # Artwork and fonts
 
+## Workflow diagram
+
+- `agent-workflow.svg`: a side-by-side visual guide. One side shows the run and its next-run feedback loop; the other maps public workflow files and local-only manuscript/run/version paths. The drawing uses the site's ink outlines and flat warm colors; it does not trace the reference illustrator's artwork.
+
 ## Campus panorama
 
 - `stata-center.svg`: the site's banner, a resolution-independent vector drawing with a 6144 × 2304 intrinsic size (8:3 ratio).

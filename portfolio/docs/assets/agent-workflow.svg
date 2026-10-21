@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2500" height="1400" viewBox="0 0 2500 1400" role="img" aria-labelledby="title desc">
+  <title id="title">How the research workflow works and where its files live</title>
+  <desc id="desc">A two-part diagram. On the left, Scout, Researcher, Writer, controller checks, publication, and the Correcter feedback loop into the next run. On the right, the public workflow code is located under agent-workflow-demo, while the working Paper, per-run Agent-Outputs, and saved AI-Versions remain local and gitignored.</desc>
+  <defs>
+    <marker id="arrow-ink" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M1 1 L11 6 L1 11" fill="none" stroke="#263238" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-loop" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M1 1 L11 6 L1 11" fill="none" stroke="#6C5B7B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .kicker { font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 2px; fill: #9E4938; }
+      .heading { font-family: Arial, sans-serif; font-size: 43px; font-weight: 700; fill: #263238; }
+      .subhead { font-family: Arial, sans-serif; font-size: 24px; font-weight: 400; fill: #47545A; }
+      .inputNote { font-family: Arial, sans-serif; font-size: 22px; font-weight: 400; fill: #264653; }
+      .card { stroke: #263238; stroke-width: 3; stroke-linejoin: round; }
+      .num { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: central; }
+      .cardTitle { font-family: Arial, sans-serif; font-size: 31px; font-weight: 700; fill: #263238; }
+      .outputTitle { font-family: Arial, sans-serif; font-size: 26px; font-weight: 700; fill: #263238; }
+      .cardBody { font-family: Arial, sans-serif; font-size: 22px; font-weight: 400; fill: #263238; }
+      .cardNote { font-family: Arial, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0; fill: #263238; }
+      .loopTitle { font-family: Arial, sans-serif; font-size: 26px; font-weight: 700; fill: #263238; }
+      .loopBody { font-family: Arial, sans-serif; font-size: 22px; font-weight: 400; fill: #263238; }
+      .arrowLabel { font-family: Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #47545A; }
+      .legend { font-family: Arial, sans-serif; font-size: 18px; font-weight: 400; fill: #263238; }
+      .panelTitle { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #263238; }
+      .panelSub { font-family: Arial, sans-serif; font-size: 21px; font-weight: 400; fill: #47545A; }
+      .treeSection { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 1.2px; fill: #9E4938; }
+      .treeRoot { font-family: Menlo, Consolas, monospace; font-size: 24px; font-weight: 700; fill: #264653; }
+      .treePath { font-family: Menlo, Consolas, monospace; font-size: 21px; font-weight: 700; fill: #263238; }
+      .treeDesc { font-family: Arial, sans-serif; font-size: 19px; font-weight: 400; fill: #47545A; }
+      .treeLine { fill: none; stroke: #B9AA91; stroke-width: 2.5; stroke-linecap: round; }
+      .lineIcon { fill: none; stroke: #263238; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Warm paper ground and hand-inked editorial framing. -->
+  <rect width="2500" height="1400" fill="#FBF6ED"/>
+  <g id="workflow-panel" transform="translate(20 60) scale(.9)">
+  <path d="M58 202 C410 196 790 207 1140 201 S1570 198 1740 204" fill="none" stroke="#D8C8AA" stroke-width="2" stroke-linecap="round"/>
+  <text class="kicker" x="62" y="68">MY RESEARCH WORKFLOW</text>
+  <text class="heading" x="60" y="124">How I use research agents</text>
+  <text class="subhead" x="62" y="166">I set the direction; the agents help me find sources, improve drafts, and follow up.</text>
+  <text class="inputNote" x="62" y="252">I set the research question. Optional notes go to the Researcher.</text>
+
+  <!-- Connectors are behind the cards. Solid arrows stay within one run. -->
+  <g fill="none" stroke="#263238" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M354 445 C374 442 386 442 402 445"/>
+    <path d="M392 436 L402 445 L392 454"/>
+    <path d="M704 445 C724 442 736 442 752 445"/>
+    <path d="M742 436 L752 445 L742 454"/>
+    <path d="M1054 445 C1074 442 1086 442 1102 445"/>
+    <path d="M1092 436 L1102 445 L1092 454"/>
+    <path d="M1404 445 C1424 442 1436 442 1452 445"/>
+    <path d="M1442 436 L1452 445 L1442 454"/>
+    <path d="M1605 520 C1600 640 1484 700 1360 755"/>
+    <path d="M1372 742 L1360 755 L1378 755"/>
+    <path d="M1080 865 C1010 865 940 865 870 865"/>
+    <path d="M882 857 L870 865 L882 873"/>
+  </g>
+  <!-- Dashed connector is intentionally cross-run: advisory feedback returns to Researcher. -->
+  <g fill="none" stroke="#6C5B7B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="11 10">
+    <path d="M708 755 C708 680 560 688 560 604"/>
+    <path d="M550 616 L560 604 L570 616" stroke-dasharray="none"/>
+  </g>
+
+  <!-- A-Scout -->
+  <g>
+    <rect class="card" x="60" y="300" width="294" height="304" rx="23" fill="#F4E5BB"/>
+    <circle cx="96" cy="337" r="20" fill="#D89A2B" stroke="#263238" stroke-width="2"/>
+    <text class="num" x="96" y="337">1</text>
+    <circle cx="297" cy="340" r="18" class="lineIcon"/>
+    <path d="M310 353 L329 372" class="lineIcon"/>
+    <text class="cardTitle" x="84" y="402">A-Scout</text>
+    <text class="cardBody" x="84" y="448">Finds relevant papers</text>
+    <text class="cardBody" x="84" y="480">Checks the source details</text>
+    <text class="cardBody" x="84" y="512">Makes sure the PDFs open</text>
+    <text class="cardBody" x="84" y="544">Keeps a reading list</text>
+    <path d="M84 564 C136 559 203 568 329 562" fill="none" stroke="#C39135" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- A-Researcher -->
+  <g>
+    <rect class="card" x="410" y="300" width="294" height="304" rx="23" fill="#DCECE5"/>
+    <circle cx="446" cy="337" r="20" fill="#2A9D8F" stroke="#263238" stroke-width="2"/>
+    <text class="num" x="446" y="337">2</text>
+    <path d="M642 322 Q660 319 676 327 L676 359 Q659 352 642 360 Z M642 322 Q624 319 608 327 L608 359 Q625 352 642 360 Z" class="lineIcon"/>
+    <path d="M642 323 L642 359" class="lineIcon"/>
+    <text class="cardTitle" x="434" y="402">A-Researcher</text>
+    <text class="cardBody" x="434" y="448">Reads the paper and</text>
+    <text class="cardBody" x="434" y="480">the checked source list</text>
+    <text class="cardBody" x="434" y="512">Suggests fixes and ideas</text>
+    <text class="cardBody" x="434" y="544">No novelty filter</text>
+    <path d="M434 564 C500 559 612 568 680 562" fill="none" stroke="#2A9D8F" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- A-Writer -->
+  <g>
+    <rect class="card" x="760" y="300" width="294" height="304" rx="23" fill="#F6DDD3"/>
+    <circle cx="796" cy="337" r="20" fill="#E76F51" stroke="#263238" stroke-width="2"/>
+    <text class="num" x="796" y="337">3</text>
+    <path d="M968 352 L1000 320 Q1005 315 1010 320 L1017 327 Q1022 332 1017 337 L985 369 L964 375 Z" class="lineIcon"/>
+    <path d="M968 352 L985 369 M1000 320 L1017 337" class="lineIcon"/>
+    <text class="cardTitle" x="784" y="402">A-Writer</text>
+    <text class="cardBody" x="784" y="448">Uses those ideas to</text>
+    <text class="cardBody" x="784" y="480">revise a safe copy</text>
+    <text class="cardBody" x="784" y="512">Marks what changed</text>
+    <text class="cardBody" x="784" y="544">in this run</text>
+    <path d="M784 564 C840 559 920 568 1029 562" fill="none" stroke="#D46A4D" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Trusted controller checks and builds. -->
+  <g>
+    <path d="M1324 319 L1349 328 L1346 350 Q1342 366 1324 375 Q1306 366 1302 350 L1299 328 Z" class="lineIcon"/>
+    <path d="M1312 346 L1321 355 L1338 337" class="lineIcon"/>
+    <text class="cardTitle" x="1134" y="402">Controller checks</text>
+    <text class="cardBody" x="1134" y="448">Checks sources and edits</text>
+    <text class="cardBody" x="1134" y="480">and which files changed</text>
+    <text class="cardBody" x="1134" y="512">Builds both PDFs separately</text>
+    <text class="cardBody" x="1134" y="544">Publishes only if both pass</text>
+    <path d="M1134 564 C1202 559 1284 568 1379 562" fill="none" stroke="#51737A" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Published version: this happens before Correcter is invoked. -->
+  <g>
+    <path d="M1696 322 L1720 322 L1732 334 L1732 371 L1696 371 Z" class="lineIcon"/>
+    <path d="M1720 322 L1720 335 L1732 335 M1704 345 L1724 345 M1704 355 L1724 355" class="lineIcon"/>
+    <text class="outputTitle" x="1484" y="425">The new version</text>
+    <text class="outputTitle" x="1484" y="460">is saved in the folder</text>
+    <path d="M1484 500 C1545 495 1640 504 1729 498" fill="none" stroke="#C39135" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Cross-run feedback loop. -->
+  <text class="inputNote" x="1080" y="710">After publication: a follow-up review</text>
+  <g>
+    <rect class="card" x="1080" y="755" width="500" height="170" rx="24" fill="#E9E2EF"/>
+    <circle cx="1120" cy="798" r="22" fill="#6C5B7B" stroke="#263238" stroke-width="2"/>
+    <path d="M1110 793 Q1110 785 1119 785 L1131 785 Q1140 785 1140 793 L1140 801 Q1140 809 1131 809 L1120 809 L1113 817 L1114 808 Q1110 805 1110 801 Z" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="loopTitle" x="1156" y="804">A-Correcter</text>
+    <text class="loopBody" x="1112" y="844">Offers ideas for next time</text>
+    <text class="loopBody" x="1112" y="875">Leaves the saved version alone</text>
+    <path d="M1112 902 C1202 897 1450 907 1548 900" fill="none" stroke="#6C5B7B" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g>
+    <path d="M510 786 L540 786 Q546 786 546 792 L546 816 Q546 822 540 822 L510 822 Q504 822 504 816 L504 792 Q504 786 510 786 Z" fill="#FFFFFF" stroke="#263238" stroke-width="2.5"/>
+    <path d="M505 790 L525 806 L545 790" fill="none" stroke="#263238" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="loopTitle" x="564" y="804">Notes for the next run</text>
+    <text class="loopBody" x="502" y="844">The notes are saved for later</text>
+    <text class="loopBody" x="502" y="875">Researcher checks what’s useful</text>
+    <text class="loopBody" x="502" y="906">Not every suggestion is used</text>
+  </g>
+
+  <!-- Legend and color-independent explanation. -->
+  <path d="M64 1040 C98 1038 138 1042 174 1040" fill="none" stroke="#263238" stroke-width="4" stroke-linecap="round"/>
+  <path d="M162 1032 L174 1040 L162 1048" fill="none" stroke="#263238" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="legend" x="194" y="1047">steps in this run</text>
+  <path d="M500 1040 C534 1038 574 1042 610 1040" fill="none" stroke="#6C5B7B" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+  <path d="M598 1032 L610 1040 L598 1048" fill="none" stroke="#6C5B7B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="legend" x="630" y="1047">steps followed in the next run</text>
+  <text class="legend" x="60" y="1100">The review comes after publication, so it can’t hold up the version that’s already finished.</text>
+  </g>
+
+  <!-- Folder map: descriptions and branch lines, not agent boxes. -->
+  <path d="M1640 72 L1640 1328" fill="none" stroke="#D8C8AA" stroke-width="2.5" stroke-linecap="round"/>
+  <text class="panelTitle" x="1690" y="112">Where things live</text>
+  <text class="panelSub" x="1692" y="151">The repo holds workflow code. Paper data stays local.</text>
+
+  <text class="treeSection" x="1692" y="207">IN THE PORTFOLIO REPO</text>
+  <path d="M1703 250 L1722 250" class="treeLine"/>
+  <path d="M1703 250 L1703 716" class="treeLine"/>
+  <text class="treeRoot" x="1735" y="258">agent-workflow-demo/</text>
+
+  <path d="M1703 306 L1722 306" class="treeLine"/>
+  <text class="treePath" x="1735" y="313">workflow</text>
+  <text class="treeDesc" x="1735" y="339">Run, test, or resume the workflow</text>
+
+  <path d="M1703 365 L1722 365" class="treeLine"/>
+  <text class="treePath" x="1735" y="372">agent-workflow.json</text>
+  <text class="treeDesc" x="1735" y="398">Agent roles, limits, and paths</text>
+
+  <path d="M1703 424 L1722 424" class="treeLine"/>
+  <text class="treePath" x="1735" y="431">agents/prompts/</text>
+  <text class="treeDesc" x="1735" y="457">What each agent is asked to do</text>
+
+  <path d="M1703 483 L1722 483" class="treeLine"/>
+  <text class="treePath" x="1735" y="490">skills/</text>
+  <text class="treeDesc" x="1735" y="516">Writing and citation guidance</text>
+
+  <path d="M1703 542 L1722 542" class="treeLine"/>
+  <text class="treePath" x="1735" y="549">paper_workflow/runner.py</text>
+  <text class="treeDesc" x="1735" y="575">Coordinates each run and its checks</text>
+
+  <path d="M1703 601 L1722 601" class="treeLine"/>
+  <text class="treePath" x="1735" y="608">paper_workflow/nono_launcher.py</text>
+  <text class="treeDesc" x="1735" y="634">Runs agents and builds in isolation</text>
+
+  <path d="M1703 660 L1722 660" class="treeLine"/>
+  <text class="treePath" x="1735" y="667">paper_workflow/scout_retrieval.py</text>
+  <text class="treeDesc" x="1735" y="693">Finds sources and checks the details</text>
+
+  <path d="M1703 719 L1722 719" class="treeLine"/>
+  <text class="treePath" x="1735" y="726">paper_workflow/tests/</text>
+  <text class="treeDesc" x="1735" y="752">Offline checks for the workflow</text>
+
+  <path d="M1692 790 C1905 786 2244 795 2460 790" fill="none" stroke="#D8C8AA" stroke-width="2.5" stroke-linecap="round"/>
+  <text class="treeSection" x="1692" y="836">LOCAL ONLY · EXCLUDED FROM THE REPO</text>
+
+  <path d="M1703 876 L1722 876" class="treeLine"/>
+  <path d="M1703 876 L1703 1117" class="treeLine"/>
+  <text class="treePath" x="1735" y="883">Paper/</text>
+  <text class="treeDesc" x="1735" y="910">The current working manuscript</text>
+
+  <path d="M1703 957 L1722 957" class="treeLine"/>
+  <text class="treePath" x="1735" y="964">Agent-Outputs/runs/run-NNNNNN/</text>
+  <text class="treeDesc" x="1735" y="991">That run’s jobs, notes, logs, and handoffs</text>
+
+  <path d="M1703 1038 L1722 1038" class="treeLine"/>
+  <text class="treePath" x="1735" y="1045">AI-Versions/Vn/</text>
+  <text class="treeDesc" x="1735" y="1072">A saved paper version after successful builds</text>
+
+  <text class="treeDesc" x="1692" y="1150">The workflow is public; the paper, run records, and versions stay private.</text>
+</svg>
